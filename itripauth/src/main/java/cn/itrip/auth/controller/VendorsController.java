@@ -57,7 +57,7 @@ public class VendorsController {
 	 * 微信登录——第一步：获取code
 	 * @param response
 	 */
-	@RequestMapping(value = "/wechat/login")
+//	@RequestMapping(value = "/wechat/login")
 	public void wechatLogin(HttpServletResponse response){
 		String qrconnect="https://open.weixin.qq.com/connect/qrconnect?appid=wx9168f76f000a0d4c&redirect_uri=http%3a%2f%2fitrip.project.bdqn.cn%2fauth%2fvendors%2fwechat%2fcallback&response_type=code&scope=snsapi_login&state=STATE#wechat_redirect";
 		try {
@@ -74,7 +74,7 @@ public class VendorsController {
 	 * @param response
 	 * @throws IOException
 	 */
-	@RequestMapping(value = "/wechat/callback")
+//	@RequestMapping(value = "/wechat/callback")
 	public void wechatCallback(@RequestParam String code,HttpServletRequest request,HttpServletResponse response) throws IOException{
 		String accessTokenUrl="https://api.weixin.qq.com/sns/oauth2/access_token?appid=wx9168f76f000a0d4c&secret=8ba69d5639242c3bd3a69dffe84336c1&code="+
 				code+"&grant_type=authorization_code";	
